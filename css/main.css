@@ -22,11 +22,11 @@ div.hadouken {
   width: 659px;
   height: 494px;
 }
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   width: 659px;
   height: 494px;
 }
-.ryu-ready, .ryu-throwing {
+.ryu-ready, .ryu-throwing, .ryu-cool {
   display: none;
 }
 .ryu-ready {
@@ -38,7 +38,10 @@ div.hadouken {
 .ryu-throwing {
   background-image: url('../images/ryu-throwing-hadouken.png');
 }
-.hadouken, .ryu-ready, . ryu-still, .ryu-throwing {
+.ryu-cool {
+  background-image: url(../images/ryu-cool.gif);
+}
+.hadouken, .ryu-ready, . ryu-still, .ryu-throwing, .ryu-cool {
   background-repeat: no-repeat;
 }
 .hadouken {
@@ -52,3 +55,37 @@ div.hadouken {
   left: 520px;
   float: left;
 }
+.textContainer {
+  float: right;
+}
+/*
+.streetFighterLogo {
+  background-image: url(../images/SF_logo.png);
+  background-size: contain;
+  float: right;
+  height: 400px;
+  width: 800px;
+  position: relative;
+  top: -450px;
+  z-index: -1;
+}
+.broughtBy {
+  font-family: "comic sans";
+  font-size: 3em;
+  text-align: center;
+  float: right;
+  margin-right: 100px;
+  margin-top: 200px;
+}
+.wesBrown {
+
+}
+*/
+.howTo {
+  float: right;
+  
+}
+.howTo p {
+  width: 50%;
+}
+
