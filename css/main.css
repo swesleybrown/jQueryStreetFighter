@@ -56,36 +56,50 @@ div.hadouken {
   float: left;
 }
 .textContainer {
-  float: right;
+  height: 500px;
+  position: absolute;
+  left: 700px;
 }
-/*
 .streetFighterLogo {
-  background-image: url(../images/SF_logo.png);
-  background-size: contain;
-  float: right;
-  height: 400px;
-  width: 800px;
-  position: relative;
-  top: -450px;
-  z-index: -1;
+  display: none;
+  background-image: url(../images/Street_Fighter_Logo.png);
+  height: 450px;
+  width: 635px;
+  margin: 25px 0;
+  background-repeat: no-repeat;
 }
 .broughtBy {
-  font-family: "comic sans";
+  display: none;
+  font-family: "Comic Sans MS", "Comic Sans";
   font-size: 3em;
-  text-align: center;
-  float: right;
-  margin-right: 100px;
-  margin-top: 200px;
+  position: absolute;
+  top: 25px;
+  width: 600px;
 }
 .wesBrown {
+  display: none;
+  font-size: 3em;
+  font-family: "Comic Sans MS", "Comic Sans";
+  position: absolute;
+  top: 175px;
+  left: 150px;
+  width: 600px;
 
 }
-*/
 .howTo {
-  float: right;
-  
+  display: none;
+  font-family: "Comic Sans MS", "Comic Sans";
+  font-size: 2em;
 }
 .howTo p {
-  width: 50%;
+  width: 350px;
+  position: absolute;
+  top: 50px;
+}
+.howTo p + p {
+  width: 350px;
+  position: absolute;
+  left: 225px;
+  top: 230px;
 }
 

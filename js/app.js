@@ -1,7 +1,24 @@
-$().ready(function() {
-  playRyuIntro();
+playRyuIntro();
   $('#ryu-cool-sound')[0].load();
-});
+
+// Begin Intro animation
+
+$.globalQueue = {
+    queue: function(anim) {
+        $('body')
+        .queue(function(dequeue) {
+            anim()
+            .queue(function(innerDequeue) {
+                dequeue();
+                innerDequeue();
+            });
+        });
+            
+            return this;
+    }
+};
+
+// End Intro animation
 
 $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
@@ -53,16 +70,37 @@ function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.1;
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();
-}
+};
 function playRyuCool () {
   if (playHadouken) {
     $('#ryu-intro-sound')[0].pause();
     $('#ryu-cool-sound')[0].volume = 0.1;
     $('#ryu-cool-sound')[0].play();
   }
-}
+};
 function playRyuIntro () {
   $('#ryu-intro-sound')[0].volume = 0.1;
   $('#ryu-intro-sound')[0].load();
   $('#ryu-intro-sound')[0].play();
-} 
+}; 
+
+// Intro Animation Function
+
+$( document ).ready(function() {
+    $.globalQueue
+    .queue(function() {
+        return $('.streetFighterLogo').fadeIn(2000);
+    }).queue(function() {
+        return $('.streetFighterLogo').fadeOut(3000);
+    }).queue(function() {
+        return $(".broughtBy").fadeIn(2000);
+    }).queue(function() {
+        return $('.wesBrown').fadeIn(2000);
+    }).queue(function() {
+        return $(".broughtBy").fadeOut(2000);
+    }).queue(function() {
+        return $('.wesBrown').fadeOut(2000);
+    }).queue(function() {
+        return $(".howTo").fadeIn(2000);
+    });
+});
