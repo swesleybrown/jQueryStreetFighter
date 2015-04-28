@@ -1,0 +1,26 @@
+why doesn't margin shorthand work but margin-top: does
+  see .streetFighterLogo in main.css
+
+there is a bug where when you press the x button and you press the mouse button both actions take place causing both images to appear
+  - to fix this i am going to try and cancel one action when another is taking place
+      - cancel x when mouse is depressed
+      - tried to do cool().hide when mouse was depressed and it didn't work
+      - tried to do cool().finish when mouse was depressed and it didn't work
+  - when pressing on the mouse button a second time before the hadouken finishes a function     causes the hadouken to finish and hide
+      - i will try to do the same thing with the cool pose i will try and finish it and hide         it.
+            $('.ryu-throwing').show(
+              function() {
+                $('.ryu-cool').finish();
+                $('.ryu-cool').hide();
+              }
+            );
+        - did not work
+      - instead of finish and hide i will try .stop()
+          $('.ryu-throwing').show(
+            function() {
+              $('.ryu-cool').stop();
+            }
+          );
+        - didn't work
+        - $('.ryu-cool').stop(); tied to mouse down didn't work either
+        

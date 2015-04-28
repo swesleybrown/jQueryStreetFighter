@@ -54,7 +54,7 @@ $(document).keydown(function(event) {
     $('#ryu-intro-sound')[0].load();
     $('.ryu-ready').hide();
     $('.ryu-still').hide();
-    $('.ryu-cool').show();
+    $('.ryu-cool').show(); 
   }
 });
 $(document).keyup(function(event) {
