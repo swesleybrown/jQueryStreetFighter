@@ -22,5 +22,5 @@ there is a bug where when you press the x button and you press the mouse button 
             }
           );
         - didn't work
-        - $('.ryu-cool').stop(); tied to mouse down didn't work either
+        - $('.ryu-cool').stop(); tried to mouse down didn't work either
         
