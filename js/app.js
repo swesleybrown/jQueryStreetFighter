@@ -97,8 +97,7 @@ $( document ).ready(function() {
     }).queue(function() {
         return $('.wesBrown').fadeIn(2000);
     }).queue(function() {
-        return $(".broughtBy").fadeOut(2000);
-    }).queue(function() {
+        return $(".broughtBy").fadeOut(2000); }).queue(function() {
         return $('.wesBrown').fadeOut(2000);
     }).queue(function() {
         return $(".howTo").fadeIn(2000);
